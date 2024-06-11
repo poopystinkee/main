@@ -17,16 +17,17 @@ overflow-y: scroll; /* creates parallax effect (unfinished) */
 }
 .topsection::before {
 content:"";
-width:100%;
-height:100%;
+width:90%;
+height:90%;
 position: absolute;
-background: url("../backgroundimage.jpg") top center; 
 background-size: cover;
 transform: translateZ(-1px) scale(1);
 filter: blur(2px);     /* also parallax effect */
 }
 .bottomsection {
-background: #034 
+background-image: url('../treeimage.jpg');
+background-position: center;
+background-size: 1500px 1000px;
 }
 .text {
  top:30%;
