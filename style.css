@@ -1,11 +1,19 @@
+/*Author: Felix Davis-Eldridge*/
+/*Date Created: 17/06/2024*/
+/*Last Updated: 24/06/2024 */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 body {
-    background-color: darkslategray;
-    color: antiquewhite;
+    background-image: linear-gradient(rgb(17, 45, 97), rgb(8, 20, 43));
+   /* background-color: darkslategray; */
+    color: rgb(250, 235, 215);
     font-family: "Rubik", sans-serif;
     padding: 0;
     margin: 0;
+
 }
+
 
 section {
     display: grid;
@@ -16,10 +24,34 @@ section {
 
 .hidden {
     opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);      /* Sets the element to have 0 opacity (invisible) and offscreen */
     transition: all 1s;
 }
 
 .show {
 opacity: 1;
-
+filter: blur(0);        /* When the Intersection Observer gives the element the show class it applies the animation */
+transform:translateX(0); 
 }
+
+.gallery {
+display: flex;
+size: 50%;
+}
+
+.gallery:nth-child(2) {
+    transition-delay: 200ms;
+    size: 50%;
+}
+
+.gallery:nth-child(3) {
+    transition-delay: 200ms;
+    size: 50%;
+}
+
+.gallery:nth-child(4) {
+    transition-delay: 200ms;
+    size: 50%;
+}
+    
