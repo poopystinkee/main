@@ -4,9 +4,10 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
 body {
     background-image: linear-gradient(rgb(17, 45, 97), rgb(8, 20, 43));
-   /* background-color: darkslategray; */
+   /* background-color: darkslategray; (this is a temporary line) */
     color: rgb(250, 235, 215);
     font-family: "Rubik", sans-serif;
     padding: 0;
@@ -31,12 +32,12 @@ section {
 
 .show {
 opacity: 1;
-filter: blur(0);        /* When the Intersection Observer gives the element the show class it applies the animation */
+filter: blur(0);        /* When the intersection observer gives the element the show class it applies the animation and makes the element visible */
 transform:translateX(0); 
 }
 
 .gallery {
-display: flex;
+display: flex; /*  image section for mcbride album or something similar */
 size: 50%;
 }
 
@@ -54,4 +55,14 @@ size: 50%;
     transition-delay: 200ms;
     size: 50%;
 }
-    
+
+h1 { 
+font-family:"Roboto Slab", serif; 
+
+}
+
+#title-image {
+max-width: 100%;
+height: auto;
+z-index: -1;
+}
