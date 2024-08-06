@@ -2,7 +2,6 @@
 /*Date Created: 17/06/2024*/
 /*Last Updated: 24/06/2024 */
 
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
 body {
@@ -15,6 +14,10 @@ body {
 
 }
 
+html {
+
+    scroll-behavior: smooth
+    }
 
 section {
     display: grid;
@@ -65,4 +68,41 @@ font-family:"Roboto Slab", serif;
 max-width: 100%;
 height: auto;
 z-index: -1;
+}
+
+.nav {
+    background-color: darkgreen;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    outline: 10px black;
+  }
+  
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 20px; /* Add some padding to the left and right */
+    display: flex;
+    justify-content: flex-start; /* Change this line */
+  }
+  
+  .nav li {
+    margin-right: 20px; /* Reduce the margin to make the links closer together */
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav a:hover {
+    color: #ccc;
+  }
+
+.subtitletext   {
+
 }
