@@ -2,50 +2,47 @@
 // Date created: 17/06/2024
 // Last updated: 24/06/2024
 
+// Create an IntersectionObserver instance
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      console.log(entry)
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show'); // determines whether elements on a page are visible or not
-      } else { 
-        entry.target.classList.remove('show');
-      }
-    });
-  }, {}); 
-  
-  const hiddenElements = document.querySelectorAll('.hidden'); 
-  hiddenElements.forEach((el) => observer.observe(el)); // grabs all hidden elements
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show'); // Add the 'show' class when the element is visible
+    } else {
+      entry.target.classList.remove('show'); // Remove the 'show' class when the element is not visible
+    }
+  });
+}, {});
 
-  // get the navbar element
+// Get all elements with the 'hidden' class
+const hiddenElements = document.querySelectorAll('.hidden');
+
+// Observe each hidden element
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Get the navbar element
 const nav = document.querySelector('.nav');
 
-// check if the user has scrolled to the bottom of the page
+// Function to check the scroll position
 function checkScrollPosition() {
   const scrollPosition = window.scrollY + window.innerHeight;
   const documentHeight = document.body.offsetHeight;
 
   if (scrollPosition >= documentHeight) {
-    nav.classList.add('bottom');
+    nav.classList.add('bottom'); // Add the 'bottom' class when the user reaches the bottom of the page
   } else {
-    nav.classList.remove('bottom');
+    nav.classList.remove('bottom'); // Remove the 'bottom' class when the user is not at the bottom of the page
   }
 }
 
-// event listener to window scroll event
+// Event listener for the window scroll event
 window.addEventListener('scroll', checkScrollPosition);
 
-document.addEventListener('DOMContentLoaded', () => {
-  const splitImage = document.getElementById('split-image');
-  const container = document.querySelector('.container');
+const scrollIcon = document.getElementById('scroll-icon');
 
-  container.addEventListener('scroll', () => {
-      const scrollPosition = container.scrollTop;
-      const imageHeight = splitImage.offsetHeight;
-
-      if (scrollPosition > imageHeight / 2) {
-          splitImage.style.transform = `translateX(-50%, -50%)`;
-      } else {
-          splitImage.style.transform = `translateX(-50%)`;
-      }
-  });
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) { // adjust the value to your liking
+    scrollIcon.classList.remove('hidden');
+  } else {
+    scrollIcon.classList.add('hidden');
+  }
 });

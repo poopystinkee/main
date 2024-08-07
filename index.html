@@ -3,56 +3,63 @@
 <!--Last updated: 24/06/2024-->
 
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
     <head>
     <meta charset="UTF-8" />  
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>The History of Papanui High School</title>  
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script defer src="app.js" ></script> <!--Make sure this runs AFTER head-->
-</head>
+    </head>
 <body>
+    <nav class="nav">
+        <span class="nav-text">Papanui High School</span>
+        <ul class="nav-links">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#section-two">Link 2</a></li>
+          <li><a href="#section-three">Link 3</a></li>
+        </ul>
+    </nav>
+
+
     <div class="container">
         <section class="hidden" id="section-one">
-            <h1 id="home" style="font-size: 50px">The History of Papanui High School</h1>
-            <h1 style="font-size: 36px">Featuring a brief look into the Mcbride photo album</h1>
-            <img src="phs_logomain.jpeg" id="title-image">
+            <h1 id="home" style="font-size: 38px">The History of Papanui High School</h1>
+            <p style="font-size: 30px; margin-top: 5; padding-top: 0; margin-bottom: 30px;">Featuring a brief look into the Mcbride photo album</p>
+            <img src="phs_logomain.jpeg" id="title-image" alt="Papanui High School Logo">
         </section>
     
         <section class="hidden" id="section-one-and-a-half">
-            <img src="Untitled-1.png" alt="Split Image" id="split-image">
+            <img src="backgroundimage.jpg" alt="Split Image" id="split-image">
         </section>
     
         <section class="hidden" id="section-two">
-            <h1 id="section-two" style="font-size: 38px">Insert Text here:</h1>
+            <h1 style="font-size: 38px">Insert Text here:</h1>
             <p style="font-size: 30px"></p>
         </section>
+
+
+        <section class="hidden" id="section-three">
+            <h1 style="font-size: 38px">Section Three</h1>
+            <p style="font-size: 30px">Insert Text Here:</p>
+            <div class="gallery"> <!--Image section-->
+                <div class="gallery-item">
+                    <img src="phs_logo.jpeg" alt="Papanui High School Logo">
+                </div>
+                <div class="gallery-item">
+                    <img src="phs_logo.jpeg" alt="Papanui High School Logo">
+                </div>
+                <div class="gallery-item">
+                    <img src="phs_logo.jpeg" alt="Papanui High School Logo">
+                </div>
+            </div>
+        </section>
+   
     </div>
 
-        <div class="container">
-            <section class="hidden">
-                <h1 id="section-three" style="font-size: 38px">Section Three</h1>
-                <p style="font-size: 30px">Insert Text Here:</p>
-                <div class="gallery"> <!--Image section-->
-                    <div class="gallery-item">
-                        <img src="phs_logo.jpeg">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="phs_logo.jpeg">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="phs_logo.jpeg">
-                    </div>
-                </div>
-            </section>
-        </div>
+    <div class="scroll-icon hidden" id="scroll-icon">
+        <img src="496855-200.png" alt="Scroll down" width="80" height="80">
+      </div>
 
-        <!-- navigation bar -->
-        <nav class="nav">
-            <span class="nav-text">Papanui High School</span>
-            <ul class="nav-links">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#section-two">Link 2</a></li>
-              <li><a href="#section-three">Link 3</a></li>
-            </ul>
-        </nav>
+</body>
+</html>

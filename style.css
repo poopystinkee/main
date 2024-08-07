@@ -5,21 +5,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
 body {
-    background-image: linear-gradient(rgb(17, 45, 97), rgb(8, 20, 43));
-   /* background-color: darkslategray; (this is a temporary line) */
+    background-color:  rgb(8, 20, 43);
     color: rgb(250, 235, 215);
     font-family: "Rubik", sans-serif;
     padding: 0;
     margin: 0;
-
-}
-
-#home {
-  padding-top: 110px;
+    transition: background-color 0.6s ease;
+    overflow-x: hidden;
 }
 
 html {
-
+    box-sizing: border-box;
     scroll-behavior: smooth
     }
 
@@ -82,8 +78,6 @@ transform:translateX(0);
   height: 200px;
   object-fit: cover;
 }
-
-/* Add this to trigger the animation */
 .gallery-item {
   animation: slide-in 1s forwards;
 }
@@ -111,7 +105,7 @@ z-index: -1;
 }
 
 .nav {
-  position: fixed;
+  overflow-x: hidden;
   top: 0;
   left: 0;
   width: 100%;
@@ -167,4 +161,45 @@ z-index: -1;
   left: 50%;
   transform: translateX(-50%);
   transition: transform 0.6s ease;
+}
+
+body.scrolled {
+  background-color: #333; /* dark grey background color */
+}
+
+#split-image.scrolled {
+  transform: translateY(-100vh);
+}
+
+.scroll-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 0.3s;
+  transform: scale(5);
+  animation: bounce 2s infinite; /* animation */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-icon.hidden {
+  opacity: 1;
+}
+
+.scroll-icon:not(.hidden) {
+  opacity: 0;
+}
+
+.scroll-icon img {
+  filter: invert(1);
 }
