@@ -20,7 +20,7 @@ html {
     }
 
 section {
-    display: grid;
+    display: grid!important;
     place-items: center;
     min-height: 100vh;
     align-content: center;
@@ -71,38 +71,45 @@ z-index: -1;
 }
 
 .nav {
-    background-color: darkgreen;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    outline: 10px black;
-  }
-  
-  .nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0 20px; /* Add some padding to the left and right */
-    display: flex;
-    justify-content: flex-start; /* Change this line */
-  }
-  
-  .nav li {
-    margin-right: 20px; /* Reduce the margin to make the links closer together */
-  }
-  
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .nav a:hover {
-    color: #ccc;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.5s ease-in-out;
+}
 
-.subtitletext   {
+.nav.bottom {
+  top: auto;
+  bottom: 0;
+}
 
+.nav-text {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ccc;
 }

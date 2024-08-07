@@ -15,3 +15,21 @@ const observer = new IntersectionObserver((entries) => {
   
   const hiddenElements = document.querySelectorAll('.hidden'); 
   hiddenElements.forEach((el) => observer.observe(el)); // grabs all hidden elements
+
+  // Get the navbar element
+const nav = document.querySelector('.nav');
+
+// Function to check if the user has scrolled to the bottom of the page
+function checkScrollPosition() {
+  const scrollPosition = window.scrollY + window.innerHeight;
+  const documentHeight = document.body.offsetHeight;
+
+  if (scrollPosition >= documentHeight) {
+    nav.classList.add('bottom');
+  } else {
+    nav.classList.remove('bottom');
+  }
+}
+
+// Add event listener to window scroll event
+window.addEventListener('scroll', checkScrollPosition);
