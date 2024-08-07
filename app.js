@@ -33,3 +33,19 @@ function checkScrollPosition() {
 
 // event listener to window scroll event
 window.addEventListener('scroll', checkScrollPosition);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const splitImage = document.getElementById('split-image');
+  const container = document.querySelector('.container');
+
+  container.addEventListener('scroll', () => {
+      const scrollPosition = container.scrollTop;
+      const imageHeight = splitImage.offsetHeight;
+
+      if (scrollPosition > imageHeight / 2) {
+          splitImage.style.transform = `translateX(-50%, -50%)`;
+      } else {
+          splitImage.style.transform = `translateX(-50%)`;
+      }
+  });
+});
