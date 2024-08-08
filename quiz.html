@@ -1,0 +1,57 @@
+<!--Author: Felix Davis-Eldridge-->
+<!--Date created: 17/06/2024-->
+<!--Last updated: 24/06/2024-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />  
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Papanui High School Quiz</title>  
+    <link rel="stylesheet" type="text/css" href="quizstyle.css" />
+    <script defer src="app.js" ></script> <!--Make sure this runs AFTER head-->
+    </head>
+<body>
+    <div class="quiz-container">
+        <h1>Papanui High School Quiz</h1>
+        <form id="quiz-form">
+            <div class="question-container">
+                <p id="question">How many principal figures has Papanui High School had since its founding?</p>
+                <input type="radio" id="option1" name="option" value="7">
+                <label id="option1-label" for="option1">7</label><br>
+                <input type="radio" id="option2" name="option" value="8">
+                <label id="option2-label" for="option2">8</label><br>
+                <input type="radio" id="option3" name="option" value="12">
+                <label id="option3-label" for="option3">12</label>
+            </div>
+
+            <div class="question-container" style="display: none;">
+                <p id="question2">Why was Papanui considered one of the most progressive schools at the time in all of the country back in the 1960s?</p>
+                <input type="radio" id="option4" name="option2" value="Because of the very up to date facilities">
+                <label id="option4-label" for="option4">Because of the very up to date facilities</label><br>
+                <input type="radio" id="option5" name="option2" value="Because of the highly qualified staffing">
+                <label id="option5-label" for="option5">Because of the highly qualified staffing</label><br>
+                <input type="radio" id="option6" name="option2" value="Because of the implementation of co-education">
+                <label id="option6-label" for="option6">Because of the implementation of co-education</label>
+            </div>
+
+            <div class="question-container" style="display: none;">
+                <p id="question3">What year was the Graham Condon pool facility installed in collaboration with the school?</p>
+                <input type="radio" id="option7" name="option3" value="2011">
+                <label id="option7-label" for="option7">2011</label><br>
+                <input type="radio" id="option8" name="option3" value="1979">
+                <label id="option8-label" for="option8">1979</label><br>
+                <input type="radio" id="option9" name="option3" value="2002">
+                <label id="option9-label" for="option9">2002</label>
+            </div>
+
+            <button id="submit-btn" type="button">Submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+
+    <div class="footer-container">
+        <button onclick="location.href='./index.html'">Back to Home</button>
+    </div>
+</body>
+</html>
