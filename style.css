@@ -39,20 +39,20 @@ section {
     grid-column: 1; 
     max-width: 800px; 
     margin: 0 auto; 
-    padding: 0 5px; /* Removed top and bottom padding */
+    padding: 0 5px; 
     text-align: left; 
   }
 
 .hidden {
     opacity: 0;
     transform: translateX(-100%);
-    filter: blur(5px);      /* Sets the element to have 0 opacity (invisible) and offscreen */
+    filter: blur(5px);     
     transition: all 1s;
 }
 
 .show {
 opacity: 1;
-filter: blur(0);        /* When the intersection observer gives the element the show class it applies the animation and makes the element visible */
+filter: blur(0);       
 transform:translateX(0); 
 }
 
@@ -176,7 +176,7 @@ z-index: -1;
 }
 
 body.scrolled {
-  background-color: #333; /* dark grey background color */
+  background-color: #333; 
 }
 
 #split-image.scrolled {
@@ -268,22 +268,22 @@ body.scrolled {
 }
 
 .section-three-content {
-  flex-basis: 60%; /* adjust the width of the text section */
+  flex-basis: 60%; 
   margin-right: 20px;
 }
 
 .gallery {
-  grid-column: 1 / -1; /* span across all columns */
+  grid-column: 1 / -1; 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* center the images horizontally */
+  justify-content: center; 
   align-items: center;
 }
 
 .gallery-item {
-  display: flex; /* make the image item a flex container */
-  justify-content: center; /* center the image horizontally */
-  margin: 20px; /* add some margin around the image */
+  display: flex; 
+  justify-content: center; 
+  margin: 20px; 
   animation: slide-in 1s forwards;
 }
 
@@ -300,12 +300,12 @@ body.scrolled {
 }
 
 .gallery-item img {
-  max-width: 300px; /* set a maximum width for the image */
-  height: auto; /* set the height to auto to maintain aspect ratio */
-  object-fit: cover; /* make the image cover the entire container */
-  border-radius: 10px; /* add a border radius to the image */
+  max-width: 300px; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 10px; 
   transition: transform 0.2s ease-in-out;
-  border: 1px solid #ddd; /* add a border to the image */
+  border: 1px solid #ddd; 
 }
 
 
@@ -404,7 +404,7 @@ button {
 }
 
 button:hover {
-  background-color: #3e8e41; /* adjust this value to change the hover color */
+  background-color: #3e8e41;
 }
 
 .footer-container {
@@ -431,7 +431,7 @@ button:hover {
 }
 
 button.show {
-  opacity: 1; /* show the button when the class is added */
+  opacity: 1; 
 }
 
 .quiz-container {

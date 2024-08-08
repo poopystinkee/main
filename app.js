@@ -1,24 +1,26 @@
-// Create an IntersectionObserver instance
+// create an IntersectionObserver instance
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
     } else {
+      
       entry.target.classList.remove('show');
+    
     }
   });
 }, {});
 
-// Get all elements with the 'hidden' class
+// get all elements with the 'hidden' class
 const hiddenElements = document.querySelectorAll('.hidden');
 
-// Observe each hidden element
+// observe each hidden element
 hiddenElements.forEach((el) => observer.observe(el));
 
-// Get the scroll icon element
+// get the scroll icon element
 const scrollIcon = document.getElementById('scroll-icon');
 
-// Event listener for the window scroll event
+// event listener for the window scroll event
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
     scrollIcon.classList.remove('hidden');
@@ -32,6 +34,7 @@ window.addEventListener('scroll', () => {
     body.classList.add('scrolled');
   } else {
     body.classList.remove('scrolled');
+  
   }
 });
 
@@ -68,6 +71,7 @@ const questions = [
   }
 ];
 
+// more questions can be implemented with this same formula
 let currentQuestion = 0;
 let score = 0;
 
@@ -75,18 +79,22 @@ document.getElementById("question").innerHTML = questions[currentQuestion].quest
 document.getElementById("option1-label").innerHTML = questions[currentQuestion].options[0];
 document.getElementById("option2-label").innerHTML = questions[currentQuestion].options[1];
 document.getElementById("option3-label").innerHTML = questions[currentQuestion].options[2];
-
 document.getElementById("submit-btn").addEventListener("click", checkAnswer);
 
 function checkAnswer() {
   const selectedOption = document.querySelector('input[name="option"]:checked');
   if (selectedOption.id === `option${questions[currentQuestion].correct + 1}`) {
       score++;
-      document.getElementById("result").innerHTML = `Correct! Your score is ${score} out of ${currentQuestion + 1}`;
-  } else {
-      document.getElementById("result").innerHTML = `Incorrect. The correct answer was ${questions[currentQuestion].options[questions[currentQuestion].correct]}. Your score is ${score} out of ${currentQuestion + 1}`;
+      
+      document.getElementById("result").innerHTML = `Correct. Your score is ${score} out of ${currentQuestion + 1}`;
+  
+    } else {
+      
+    document.getElementById("result").innerHTML = `Incorrect. The correct answer was ${questions[currentQuestion].options[questions[currentQuestion].correct]}. Your score is ${score} out of ${currentQuestion + 1}`;
+  
   }
-  currentQuestion++;
+
+  currentQuestion++; // this displays the current question and answer options
   if (currentQuestion < questions.length) {
       document.getElementById("question").innerHTML = questions[currentQuestion].question;
       document.getElementById("option1-label").innerHTML = questions[currentQuestion].options[0];
